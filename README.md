@@ -6,6 +6,8 @@
 
 Application made for demo purposes only. It's Ionic Angular4 application that represents how Instagram functionality could be implemented with Ionic framework.
 
+Demo binaries can be found here: [https://github.com/Sennjen/ionicOnixgram/tree/master/app_build](here)
+
 ## Development server
 
 Run `npm install` for install all packages. Run `ionic serve` for a dev server.

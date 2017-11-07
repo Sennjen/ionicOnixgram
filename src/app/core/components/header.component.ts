@@ -1,6 +1,5 @@
-import { Component,  HostListener, Inject, OnInit } from '@angular/core';
-import { App, ViewController } from 'ionic-angular';
-import { DOCUMENT } from '@angular/platform-browser';
+import { Component, OnInit } from '@angular/core';
+import { App } from 'ionic-angular';
 
 @Component({
   selector: 'app-header',
@@ -21,17 +20,9 @@ export class HeaderComponent implements OnInit {
     this.searchQuery = '';
   }
 
-  constructor(
-    @Inject(DOCUMENT) private document: Document,
-    public appCtrl: App) {}
+  constructor(public appCtrl: App) {}
 
   ngOnInit() {}
-
-  @HostListener("window:scroll", [])
-  onWindowScroll() {
-    const offset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    this.navIsFixed = offset > 51;
-  }
 
   pushPage(page) {
     this.appCtrl.getRootNav().push(page);
