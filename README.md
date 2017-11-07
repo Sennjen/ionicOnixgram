@@ -1,26 +1,11 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+[![license](https://img.shields.io/github/license/mrjazz/onixinstapp.svg?style=flat-square)](license)
+[![dependencies](https://www.versioneye.com/user/projects/59f8839e0fb24f1ec2863979/badge.svg?style=flat-square)](dependencies)
+[![Travis](https://img.shields.io/travis/mrjazz/onixinstapp.svg?style=flat-square)](build)
 
-## How to use this template
+# ionicOnixgram
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+Application made for demo purposes only. It's Ionic Angular4 application that represents how Instagram functionality could be implemented with Ionic framework.
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+## Development server
 
-### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myTabs tabs
-```
-
-Then, to run it, cd into `myTabs` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
-
-Substitute ios for android if not on a Mac.
-
+Run `npm install` for install all packages. Run `ionic serve` for a dev server.
