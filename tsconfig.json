@@ -20,7 +20,7 @@
     "node_modules"
   ],
   "compileOnSave": false,
-  "atom": {
+  "atom":{
     "rewriteTsconfig": false
   }
 }

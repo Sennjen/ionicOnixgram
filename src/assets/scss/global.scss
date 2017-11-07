@@ -1,0 +1,23 @@
+/*-------------------------------------------------------*/
+/*- HELPERS                                             -*/
+/*-------------------------------------------------------*/
+@import './helpers/reset.scss';
+@import './helpers/mixins.scss';
+
+/*-------------------------------------------------------*/
+/*- COMPONENTS                                          -*/
+/*-------------------------------------------------------*/
+@import './components/header.scss';
+@import './components/footer.scss';
+@import './components/article.scss';
+@import './components/user-card.scss';
+@import './components/gallery.scss';
+@import './components/post-view.scss';
+
+/*-------------------------------------------------------*/
+/*- LAYOUTS                                             -*/
+/*-------------------------------------------------------*/
+@import './layouts/base.scss';
+@import './layouts/home.scss';
+@import './layouts/explore.scss';
+@import './layouts/profile.scss';

@@ -1,0 +1,72 @@
+<article class="article">
+  <header>
+    <div class="article-logo">
+      <a (click)="navCtrl.push('ProfilePage');">
+        <img src="{{postData.profile.avatar}}"></a>
+    </div>
+    <div class="article-title">
+      <div>
+        <div class="name">
+          <a title="natgeo" (click)="navCtrl.push('ProfilePage');">{{postData.profile.username}}</a>
+        </div>
+      </div>
+      <div class="location" *ngIf="false">
+        <a title="Seychelles" (click)="navCtrl.push('ExplorePage');">Seychelles</a>
+      </div>
+    </div>
+  </header>
+  <div class="media-content">
+    <div>
+      <div class="container">
+        <div class="main-image">
+          <div class="holder">
+            <img src="{{postData.picture.url}}">
+          </div>
+          <div class="shift"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="description">
+    <section class="controls">
+      <a class="like-btn" href="#" role="button" aria-disabled="false">
+        <span class="heart-open-icon">Like</span>
+      </a>
+      <a class="add-comment-btn" href="#" role="button">
+        <span class="comment-icon">Comment</span>
+      </a>
+    </section>
+    <section class="likes">
+      <div class="_3gwk6 _nt9ow">
+        <a class="_nzn1h" (click)="navCtrl.push('ProfilePage');">
+          <span>{{postData.likesCount}}</span> likes
+        </a>
+      </div>
+    </section>
+    <div class="comments">
+      <ul>
+        <li class="comment" *ngFor="let comment of postData.comments">
+          <a class="user-name" title="{{comment.user.name}}" (click)="navCtrl.push('ProfilePage');">{{comment.user.username}}</a>
+            <span>
+              {{comment.text}}
+            </span>
+        </li>
+      </ul>
+    </div>
+    <div class="time">
+      <a (click)="navCtrl.push('ExplorePage');">
+        <app-time-ago [timeStamp]="postData.timestamp * 1000"></app-time-ago>
+      </a>
+    </div>
+    <section class="add-comment">
+      <form>
+        <textarea aria-label="Add a comment…" placeholder="Add a comment…"></textarea>
+      </form>
+    </section>
+  </div>
+  <div class="more-options">
+    <button>
+      <span class="options-ellipsis-icon">More options</span>
+    </button>
+  </div>
+</article>

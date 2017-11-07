@@ -1,0 +1,39 @@
+<nav class="header" role="navigation">
+  <div class="space-holder"></div>
+  <div class="header-container" [class.morphed]="navIsFixed">
+    <div class="controls">
+      <div class="brand">
+        <div class="logo">
+          <a class="name" (click)="pushPage('HomePage');">Instagram</a>
+          <a class="image" (click)="pushPage('HomePage');">Instagram</a>
+        </div>
+      </div>
+      <div class="search">
+        <input #searchInput type="text" placeholder="Search"  [(ngModel)]="searchQuery" (focusout)="clearSearch()">
+        <span class="search-icon" *ngIf="isFocused"></span>
+        <div class="search-clear" *ngIf="isFocused" (click)="clearSearch()"></div>
+        <div class="input-overflow" (click)="focusSearch(searchInput)" *ngIf="!isFocused">
+          <div class="layer">
+            <span class="search-icon"></span>
+            <span class="placeholder">Search</span>
+          </div>
+        </div>
+      </div>
+      <div class="links">
+        <div class="links-container">
+          <div class="link-item">
+            <a class="explore-link" (click)="pushPage('ExplorePage');">Find People</a>
+          </div>
+          <div class="link-item">
+            <a href="#" class="activity-link">
+              <span>Activity Feed</span>
+            </a>
+          </div>
+          <div class="link-item">
+            <a class="profile-link" (click)="pushPage('ProfilePage');">Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

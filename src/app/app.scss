@@ -1,16 +1,23 @@
-// http://ionicframework.com/docs/theming/
+/*-------------------------------------------------------*/
+/*- HELPERS                                             -*/
+/*-------------------------------------------------------*/
+@import '../assets/scss/helpers/reset.scss';
+@import '../assets/scss/helpers/mixins.scss';
 
+/*-------------------------------------------------------*/
+/*- COMPONENTS                                          -*/
+/*-------------------------------------------------------*/
+@import '../assets/scss/components/header.scss';
+@import '../assets/scss/components/footer.scss';
+@import '../assets/scss/components/article.scss';
+@import '../assets/scss/components/user-card.scss';
+@import '../assets/scss/components/gallery.scss';
+@import '../assets/scss/components/post-view.scss';
 
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+/*-------------------------------------------------------*/
+/*- LAYOUTS                                             -*/
+/*-------------------------------------------------------*/
+@import '../assets/scss/layouts/base.scss';
+@import '../assets/scss/layouts/home.scss';
+@import '../assets/scss/layouts/explore.scss';
+@import '../assets/scss/layouts/profile.scss';

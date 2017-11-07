@@ -1,0 +1,19 @@
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+            transition: $transition;
+}
+@mixin sprite-bg($size) {
+    background-image: url(../../assets/images/sprites_2x.png);
+    background-repeat: no-repeat;
+    background-size: $size;
+}
+@mixin box-sizing($value) {
+    -webkit-box-sizing: $value;
+            box-sizing: $value;
+}
+@mixin align-items($position) {
+    -webkit-box-align: $position;
+    -webkit-align-items: $position;
+    -ms-flex-align: $position;
+            align-items: $position;
+}

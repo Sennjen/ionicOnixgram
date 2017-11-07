@@ -1,0 +1,79 @@
+<article *ngIf="profileData">
+  <header>
+    <div class="profile-img">
+      <div class="img-center"><img [src]="profileData.avatar"></div>
+    </div>
+    <div class="profile-info">
+      <div class="title">
+        <h1 title="{{profileData.username}}">{{profileData.username}}</h1>
+        <span class="verified-badge-icon" title="Verified" *ngIf="profileData.verified">Verified</span>
+      </div>
+      <ul class="counts">
+        <li><span class="count-item">
+          <span class="bold-text">{{profileData.count.posts | formatNumbers}}</span> posts</span>
+        </li>
+        <li><a class="count-item" (click)="navCtrl.push('ProfilePage');">
+          <span class="bold-text" title="{{profileData.count.followers}}">{{profileData.count.followers | formatNumbers}}</span> followers</a>
+        </li>
+        <li><a class="count-item" (click)="navCtrl.push('ProfilePage');">
+          <span class="bold-text">{{profileData.count.following | formatNumbers}}</span> following</a>
+        </li>
+      </ul>
+      <div class="description">
+        {{profileData.description}}
+      </div>
+    </div>
+  </header>
+  <div class="gallery">
+    <div>
+      <div *ngFor="let item of profileData.gallery; let i = index">
+        <div class="gallery-row" *ngIf="i % 3 == 0">
+          <div class="gallery-item">
+            <a (click)="explorePost(profileData.gallery[i].id)">
+              <div class="preview-container">
+                <div class="img-holder"><img [src]="profileData.gallery[i].picture.url"></div>
+                <div class="shift"></div>
+              </div>
+              <div class="img-overflow">
+                <ul>
+                  <li><span>{{profileData.gallery[i].likes | formatNumbers}}</span><span class="heart-small-icon">likes</span></li>
+                  <li><span>{{profileData.gallery[i].posts | formatNumbers}}</span><span class="speech-bubble-small-icon">comments</span></li>
+                </ul>
+              </div>
+            </a>
+          </div>
+          <div class="gallery-item" *ngIf="profileData.gallery.length > (i + 1)">
+            <a (click)="explorePost(profileData.gallery[i+1].id)">
+              <div class="preview-container">
+                <div class="img-holder"><img [src]="profileData.gallery[i+1].picture.url"></div>
+                <div class="shift"></div>
+              </div>
+              <div class="img-overflow">
+                <ul>
+                  <li><span>{{profileData.gallery[i+1].likes | formatNumbers}}</span><span class="heart-small-icon">likes</span></li>
+                  <li><span>{{profileData.gallery[i+1].posts | formatNumbers}}</span><span class="speech-bubble-small-icon">comments</span></li>
+                </ul>
+              </div>
+            </a>
+          </div>
+          <div class="gallery-item" *ngIf="profileData.gallery.length > (i + 2)">
+            <a (click)="explorePost(profileData.gallery[i+2].id)">
+              <div class="preview-container">
+                <div class="img-holder"><img [src]="profileData.gallery[i+2].picture.url"></div>
+                <div class="shift"></div>
+              </div>
+              <div class="img-overflow">
+                <ul>
+                  <li><span>{{profileData.gallery[i+2].likes | formatNumbers}}</span><span class="heart-small-icon">likes</span></li>
+                  <li><span>{{profileData.gallery[i+2].posts | formatNumbers}}</span><span class="speech-bubble-small-icon">comments</span></li>
+                </ul>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="load-more-btn" *ngIf="false">Load more</a>
+  </div>
+</article>
+<app-post-view (isShownChange)="postId=''" [postId]="postId"></app-post-view>

@@ -1,0 +1,127 @@
+.gallery {
+    margin-bottom: 20px;
+    .gallery-row {
+                flex-direction: row;
+
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+        @media (min-width: 736px) {
+            margin-bottom: 28px;
+        }
+        @media (max-width: 735px) {
+            margin-bottom: 3px;
+        }
+        .gallery-item {
+            position: relative;
+            display: block;
+            width: 100%;
+
+            -webkit-box-flex: 1;
+            -webkit-flex: 1 0 0;
+                -ms-flex: 1 0 0;
+                    flex: 1 0 0;
+            @media (min-width: 736px) {
+                margin-right: 28px;
+            }
+            @media (max-width: 735px) {
+                margin-right: 3px;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover{
+              .img-overflow{
+                display: flex;
+              }
+            }
+            .img-overflow {
+                display: none;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: rgba(0,0,0,.3);
+
+                -webkit-box-pack: center;
+                -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                        justify-content: center;
+                ul {
+                    font-size: 16px;
+                    font-weight: 600;
+                    display: -webkit-box;
+                    display: -webkit-flex;
+                    display: -ms-flexbox;
+                    display:         flex;
+                    list-style: none;
+                    color: #fff;
+                    li {
+                        line-height: 19px;
+                        position: relative;
+                        display: table;
+                        margin: 0 auto;
+                        padding-left: 26px;
+                        @media (min-width: 736px) {
+                            &:first-child {
+                                margin-right: 30px;
+                            }
+                            &:last-child {
+                                margin-left: 0;
+                            }
+                        }
+                        .heart-small-icon,
+                        .speech-bubble-small-icon {
+                            @include sprite-bg(395px 371px);
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            display: block;
+                            overflow: hidden;
+                            width: 19px;
+                            height: 19px;
+                            white-space: nowrap;
+                            text-indent: 110%;
+                        }
+                        .heart-small-icon {
+                            background-position: -217px -113px;
+                        }
+                        .speech-bubble-small-icon {
+                            background-position: -237px -113px;
+                        }
+                    }
+                }
+            }
+            .preview-container {
+                display: block;
+                width: 100%;
+                background-color: #efefef;
+                .img-holder {
+                    display: block;
+                    overflow: hidden;
+                    padding-bottom: 100%;
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        -webkit-user-select: none;
+                           -moz-user-select: none;
+                            -ms-user-select: none;
+                                user-select: none;
+                    }
+                }
+                .shift {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+}

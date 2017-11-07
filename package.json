@@ -12,6 +12,9 @@
     "ionic:serve": "ionic-app-scripts serve"
   },
   "dependencies": {
+    "@angular/animations": "4.4.4",
+    "@angular/router": "4.4.4",
+    "core-js": "^2.4.1",
     "@angular/common": "4.4.4",
     "@angular/compiler": "4.4.4",
     "@angular/compiler-cli": "4.4.4",

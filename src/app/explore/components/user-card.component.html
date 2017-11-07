@@ -1,0 +1,15 @@
+<a class="user-photo" (click)="navCtrl.push('ProfilePage');">
+  <img  [src]="userData.avatar" >
+</a>
+<div class="user-info">
+  <div class="name">
+    <a title="bbc_travel" (click)="navCtrl.push('ProfilePage');">{{userData.username}}</a>
+    <span class="verified-badge-icon" title="Verified">Verified</span>
+  </div>
+  <div class="sub-title">{{userData.full_name}}</div>
+</div>
+<div class="follow-section">
+    <span>
+      <button (click)="navCtrl.push('ProfilePage');">Follow</button>
+    </span>
+</div>

@@ -1,0 +1,65 @@
+.explore-container {
+    width: 100%;
+    max-width: 935px;
+    margin: 0 auto 30px;
+
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+            flex-grow: 1;
+    @media (min-width: 736px) {
+        -webkit-box-sizing: content-box;
+                box-sizing: content-box;
+        width: calc(100% - 40px);
+        padding: 40px 20px 0;
+    }
+    @media (min-width: 640px) {
+        padding-top: 60px;
+    }
+    .discover-people {
+        @media (min-width: 736px) {
+            margin-bottom: 60px;
+        }
+        @media (max-width: 735px) {
+            display: none;
+        }
+        .title {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 18px;
+            margin-bottom: 16px;
+            text-align: left;
+            text-transform: capitalize;
+            color: #999;
+        }
+        .cards-container {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display:         flex;
+                    flex-direction: row;
+            height: 220px;
+
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: row;
+                -ms-flex-direction: row;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                    justify-content: center;
+        }
+    }
+    .explore-title {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 18px;
+        margin-bottom: 16px;
+        text-align: left;
+        text-transform: capitalize;
+        color: #999;
+        @media (max-width: 735px) {
+            margin-left: 8px;
+        }
+    }
+}

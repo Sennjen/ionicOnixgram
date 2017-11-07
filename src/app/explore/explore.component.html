@@ -1,0 +1,60 @@
+<div class="explore-container">
+  <div class="discover-people">
+    <h2 class="title">Discover People</h2>
+    <div class="cards-container">
+      <app-user-card *ngFor="let user of usersList" [userData]="user"></app-user-card>
+    </div>
+  </div>
+  <h2 class="explore-title">Explore</h2>
+  <article class="gallery">
+    <div>
+      <div *ngFor="let item of gallery; let i = index">
+        <div class="gallery-row" *ngIf="i % 3 == 0">
+          <div class="gallery-item">
+            <a (click)="explorePost(gallery[i].id)">
+              <div class="preview-container">
+                <div class="img-holder"><img [src]="gallery[i].picture.url"></div>
+                <div class="shift"></div>
+              </div>
+              <div class="img-overflow">
+                <ul>
+                  <li><span>{{gallery[i].likes | formatNumbers}}</span><span class="heart-small-icon">likes</span></li>
+                  <li><span>{{gallery[i].posts | formatNumbers}}</span><span class="speech-bubble-small-icon">comments</span></li>
+                </ul>
+              </div>
+            </a>
+          </div>
+          <div class="gallery-item" *ngIf="gallery.length > (i + 1)">
+            <a (click)="explorePost(gallery[i+1].id)">
+              <div class="preview-container">
+                <div class="img-holder"><img [src]="gallery[i+1].picture.url"></div>
+                <div class="shift"></div>
+              </div>
+              <div class="img-overflow">
+                <ul>
+                  <li><span>{{gallery[i+1].likes | formatNumbers}}</span><span class="heart-small-icon">likes</span></li>
+                  <li><span>{{gallery[i+1].posts | formatNumbers}}</span><span class="speech-bubble-small-icon">comments</span></li>
+                </ul>
+              </div>
+            </a>
+          </div>
+          <div class="gallery-item" *ngIf="gallery.length > (i + 2)">
+            <a (click)="explorePost(gallery[i+2].id)">
+              <div class="preview-container">
+                <div class="img-holder"><img [src]="gallery[i+2].picture.url"></div>
+                <div class="shift"></div>
+              </div>
+              <div class="img-overflow">
+                <ul>
+                  <li><span>{{gallery[i+2].likes | formatNumbers}}</span><span class="heart-small-icon">likes</span></li>
+                  <li><span>{{gallery[i+2].posts | formatNumbers}}</span><span class="speech-bubble-small-icon">comments</span></li>
+                </ul>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
+<app-post-view (isShownChange)="postId=''" [postId]="postId"></app-post-view>
